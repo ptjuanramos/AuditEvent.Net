@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NUnit" Version="3.12.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AuditEvent.Net.Attributes\AuditEvent.Net.Attributes.csproj" />
+    <ProjectReference Include="..\AuditEvent.Net\AuditEvent.Net.csproj" />
+  </ItemGroup>
+
+</Project>

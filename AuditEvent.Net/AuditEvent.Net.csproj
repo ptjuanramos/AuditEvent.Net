@@ -5,8 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Ninject" Version="3.3.4" />
-    <PackageReference Include="Ninject.Extensions.Interception" Version="3.3.5" />
+    <PackageReference Include="Castle.Core" Version="4.4.0" />
   </ItemGroup>
 
 </Project>

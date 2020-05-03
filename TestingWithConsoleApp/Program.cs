@@ -1,4 +1,5 @@
-﻿using AuditEvent.Net.Core;
+﻿using AuditEvent.Net.Attributes.Attributes;
+using AuditEvent.Net.Core;
 using System;
 
 namespace TestingWithConsoleApp
@@ -7,12 +8,17 @@ namespace TestingWithConsoleApp
     {
         static void Main(string[] args)
         {
-            AuditInterceptor auditInterceptor = new AuditInterceptor();
-            auditInterceptor.Load();
-
-            InterceptedClass interceptedClass = new InterceptedClass();
-            interceptedClass.Method();
-
+            AuditedClass auditedClass = new AuditedClass();
+            auditedClass.AuditedMethod();
+        }
+    }
+    
+    public class AuditedClass
+    {
+        [Auditable]
+        public virtual void AuditedMethod()
+        {
+            Console.WriteLine("Audited method");
         }
     }
 }

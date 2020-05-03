@@ -6,6 +6,5 @@ namespace AuditEvent.Net.Attributes.Attributes
 {
     public class AuditableAttribute
     {
-
     }
 }

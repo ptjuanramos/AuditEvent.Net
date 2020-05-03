@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AuditEvent.Net.Attributes\AuditEvent.Net.Attributes.csproj" />
     <ProjectReference Include="..\AuditEvent.Net\AuditEvent.Net.csproj" />
   </ItemGroup>
 

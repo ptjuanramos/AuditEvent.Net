@@ -4,7 +4,8 @@ using System.Text;
 
 namespace AuditEvent.Net.Attributes.Attributes
 {
-    public class AuditableAttribute
+    public class AuditableAttribute : Attribute
     {
+
     }
 }

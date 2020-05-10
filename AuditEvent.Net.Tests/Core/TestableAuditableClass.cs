@@ -5,8 +5,7 @@ using System.Text;
 
 namespace AuditEvent.Net.Tests.Core
 {
-
-    public class MasterAuditable : Auditable
+    public class MasterAuditable : IAuditable
     {
         public int PropertyToChange { get; set; }
 

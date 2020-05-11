@@ -11,9 +11,7 @@ namespace AuditEvent.Net.Core
         
         public void Intercept(IInvocation invocation)
         {
-            if(invocation.Method.ReturnType)
             invocation.Proceed();
-
         }
     }
 }

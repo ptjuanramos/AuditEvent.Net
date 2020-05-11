@@ -11,8 +11,6 @@ namespace AuditEvent.Net.Core
     public class AuditEventInterceptorEngine
     {
         private readonly AuditEventInterceptor _auditEventInterceptor;
-        private readonly ProxyGenerator _proxyGenerator;
-
         private readonly SerializationHandlerType _serializationHandlerType;
 
         private AuditEventInterceptorEngine(SerializationHandlerType serializationHandlerType)
@@ -26,11 +24,9 @@ namespace AuditEvent.Net.Core
             return new AuditEventInterceptorEngineBuilder();
         }
 
-        //todo: move this to another class, this class should start the interception process only.
-        public T Intercept<T>()
+        public void Start()
         {
-            return (T) _proxyGenerator
-                .CreateInterfaceProxyWithoutTarget(typeof(T), _auditEventInterceptor);
+            //initialize interception process
         }
 
         public class AuditEventInterceptorEngineBuilder

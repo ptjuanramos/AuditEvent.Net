@@ -8,15 +8,15 @@ namespace AuditEvent.Net.Serialization
 {
     internal class SerializationHandlerFactory
     {
-        public ISerializationHandler GetInstance(SerializerHandlerType type)
+        public ISerializationHandler GetInstance(SerializationHandlerType type)
         {
             switch(type)
             {
-                case SerializerHandlerType.JSON:
+                case SerializationHandlerType.JSON:
                     return new JsonSerializationHandler();
-                case SerializerHandlerType.XML:
+                case SerializationHandlerType.XML:
                     return new XmlSerializationHandler();
-                case SerializerHandlerType.YAML:
+                case SerializationHandlerType.YAML:
                     return new YamlSerializationHandler();
                 default:
                     throw new EntryPointNotFoundException();

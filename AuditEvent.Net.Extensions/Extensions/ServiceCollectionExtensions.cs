@@ -9,8 +9,6 @@ namespace AuditEvent.Net.Attributes.Extensions
     {
         public static void AddAuditEvent(this IServiceCollection serviceCollection )
         {
-            serviceCollection.
-            foreach(Type interfaceType)
         }
     }
 }

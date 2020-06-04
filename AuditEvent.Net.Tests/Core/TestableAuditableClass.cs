@@ -5,14 +5,14 @@ using System.Text;
 
 namespace AuditEvent.Net.Tests.Core
 {
-    public class MasterAuditable : IAuditable
+    public class MasterAuditable : IInterceptor
     {
-        public int PropertyToChange { get; set; }
+        public static int PropertyToChange { get; set; }
 
-        public override void Intercept(IInvocation invocation)
+        public void Intercept(IInvocation invocation)
         {
             PropertyToChange = 1;
-            base.Intercept(invocation);
+            invocation.Proceed();
         }
     }
 
@@ -22,20 +22,20 @@ namespace AuditEvent.Net.Tests.Core
         {
             //no interception the value is 0
             //with intercception the value is 1
-            return base.PropertyToChange;
+            return PropertyToChange;
         }
     }
     public class TestableAuditableClass
     {
 
         protected AuditableClass Input;
-        protected Auditable ClassThatIntercepts;
+        protected MasterAuditable ClassThatIntercepts;
 
         [SetUp]
         public void Setup()
         {
             // create your interceptor
-            ClassThatIntercepts = new Auditable();
+            ClassThatIntercepts = new MasterAuditable();
 
             // create your proxy
             var generator = new ProxyGenerator();

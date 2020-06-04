@@ -1,19 +1,18 @@
 ﻿using AuditEvent.Net.Core;
-using AuditEvent.Net.Interfaces;
 using Castle.DynamicProxy;
 using NUnit.Framework;
 using System.Text;
 
 namespace AuditEvent.Net.Tests.Core
 {
-    public class MasterAuditable : IInterceptor
+    public class MasterAuditable : IAuditable
     {
-        public static int PropertyToChange { get; set; }
+        public int PropertyToChange { get; set; }
 
-        public void Intercept(IInvocation invocation)
+        public override void Intercept(IInvocation invocation)
         {
             PropertyToChange = 1;
-            invocation.Proceed();
+            base.Intercept(invocation);
         }
     }
 
@@ -23,20 +22,22 @@ namespace AuditEvent.Net.Tests.Core
         {
             //no interception the value is 0
             //with intercception the value is 1
-            return PropertyToChange;
+            return base.PropertyToChange;
         }
     }
     public class TestableAuditableClass
     {
 
         protected AuditableClass Input;
-        protected MasterAuditable ClassThatIntercepts;
+        protected Auditable ClassThatIntercepts;
 
         [SetUp]
         public void Setup()
         {
-            ClassThatIntercepts = new MasterAuditable();
+            // create your interceptor
+            ClassThatIntercepts = new Auditable();
 
+            // create your proxy
             var generator = new ProxyGenerator();
             Input = generator.CreateClassProxy<AuditableClass>(ClassThatIntercepts);
         }

@@ -5,7 +5,7 @@ using System.Text;
 
 namespace AuditEvent.Net.Serialization.Handlers
 {
-    internal class YamlSerializationHandler : ISerializationHandler
+    internal class JsonSerializationHandler : ISerializationHandler
     {
     }
 }

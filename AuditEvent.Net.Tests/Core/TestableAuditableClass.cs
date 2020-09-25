@@ -1,5 +1,4 @@
-﻿using AuditEvent.Net.Core;
-using Castle.DynamicProxy;
+﻿using Castle.DynamicProxy;
 using NUnit.Framework;
 using System.Text;
 

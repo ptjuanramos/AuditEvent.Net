@@ -6,7 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace AuditEvent.Net.Core
+namespace AuditEvent.Net.Serialization
 {
     public class AuditEventInterceptorEngine
     {

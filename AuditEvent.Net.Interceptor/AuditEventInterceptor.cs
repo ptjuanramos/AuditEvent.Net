@@ -2,7 +2,7 @@
 using AuditEvent.Net.Interceptor.Models;
 using Castle.DynamicProxy;
 
-namespace AuditEvent.Net.Interceptor.Concrete
+namespace AuditEvent.Net.Interceptor
 {
     internal class AuditEventInterceptor : IAuditEventInterceptor
     {

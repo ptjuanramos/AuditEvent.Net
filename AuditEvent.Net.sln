@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestingWebApp", "TestingWeb
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuditEvent.Net.Extensions", "AuditEvent.Net.Extensions\AuditEvent.Net.Extensions.csproj", "{CB76C108-64C6-4CEB-98C8-21AA60695A5B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditEvent.Net.Interceptor", "AuditEvent.Net.Interceptor\AuditEvent.Net.Interceptor.csproj", "{5BD61D95-8979-48EC-BAC1-9D623751C343}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuditEvent.Net.Interceptor", "AuditEvent.Net.Interceptor\AuditEvent.Net.Interceptor.csproj", "{5BD61D95-8979-48EC-BAC1-9D623751C343}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuditEvent.Net.Serialization", "AuditEvent.Net.Serialization\AuditEvent.Net.Serialization.csproj", "{C41BD017-B99B-4E4B-B7CF-EA03F927CBDF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AuditEvent.Net.Serialization", "AuditEvent.Net.Serialization\AuditEvent.Net.Serialization.csproj", "{C41BD017-B99B-4E4B-B7CF-EA03F927CBDF}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{4EE73145-A687-4DFA-8A0B-5932DE7E5335}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -48,6 +50,10 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1AD8C231-097B-4D88-BA66-36331763BFDA} = {4EE73145-A687-4DFA-8A0B-5932DE7E5335}
+		{A9784AD5-2A5D-4CE6-835D-685CBAB104EC} = {4EE73145-A687-4DFA-8A0B-5932DE7E5335}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E919438F-1DB1-419D-AC39-FF4B95D7BA19}

@@ -1,5 +1,4 @@
-﻿using AuditEvent.Net.Interceptor.Interfaces;
-using AuditEvent.Net.Interceptor.Models;
+﻿using AuditEvent.Net.Models;
 using Castle.DynamicProxy;
 
 namespace AuditEvent.Net.Interceptor

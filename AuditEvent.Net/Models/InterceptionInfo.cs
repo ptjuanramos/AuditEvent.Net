@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Reflection;
 using System.Text;
 
-namespace AuditEvent.Net.Interceptor.Models
+namespace AuditEvent.Net.Models
 {
     public class InterceptionInfo
     {

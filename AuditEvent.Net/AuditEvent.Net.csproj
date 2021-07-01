@@ -8,4 +8,8 @@
     <Folder Include="Concrete\" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="AspectCore.Abstractions" Version="2.2.0" />
+  </ItemGroup>
+
 </Project>

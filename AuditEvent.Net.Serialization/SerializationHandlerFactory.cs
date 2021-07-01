@@ -1,24 +1,18 @@
-﻿using AuditEvent.Net.Serialization.Handlers;
-using AuditEvent.Net.Serialization.Interfaces;
+﻿using AuditEvent.Net.Serialization.Concrete;
 using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AuditEvent.Net.Serialization
 {
     internal class SerializationHandlerFactory
     {
-        public ISerializationHandler GetInstance(SerializationHandlerType type)
+        public static ISerializationHandler GetInstance(SerializationHandlerType type)
         {
-            switch(type)
+            return type switch
             {
-                case SerializationHandlerType.JSON:
-                    return new JsonSerializationHandler();
-                case SerializationHandlerType.XML:
-                    return new XmlSerializationHandler();
-                default:
-                    throw new EntryPointNotFoundException();
-            }
+                SerializationHandlerType.JSON => new JsonSerializationHandler(),
+                SerializationHandlerType.XML => new XmlSerializationHandler(),
+                _ => throw new EntryPointNotFoundException(),
+            };
         }
     }
 }

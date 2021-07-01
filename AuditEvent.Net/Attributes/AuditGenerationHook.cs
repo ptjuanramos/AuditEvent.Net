@@ -1,12 +1,10 @@
-﻿using AuditEvent.Net.Attributes;
-using Castle.DynamicProxy;
-using System;
+﻿using System;
 using System.Linq;
 using System.Reflection;
 
 namespace AuditEvent.Net.Attributes
 {
-    public class AuditGenerationHook : IProxyGenerationHook
+    public class AuditGenerationHook
     {
         public void MethodsInspected()
         {

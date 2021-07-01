@@ -14,7 +14,6 @@ namespace AuditEvent.Net.Tests.Attributes
             public void Test() { }
         }
 
-        [Auditable]
         public class DummyWithClassAttribute { }
 
         public class DummyWithMethodWithAttribute

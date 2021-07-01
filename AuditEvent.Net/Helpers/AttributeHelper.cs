@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Reflection;
 
 namespace AuditEvent.Net.Helpers
 {
@@ -11,7 +6,13 @@ namespace AuditEvent.Net.Helpers
     {
         public static string GetFullMethodName(MethodInfo methodInfo)
         {
-            return "";
+            if (methodInfo == null)
+                return string.Empty;
+
+            string methodName = methodInfo.Name;
+            string className = methodInfo.ReflectedType.Name;
+
+            return className + "." + methodName;
         }
     }
 }
